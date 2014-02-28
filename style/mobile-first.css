@@ -1,0 +1,170 @@
+/* ====================
+    * CSS Structure
+    - Base
+    - Layouts
+    - Media queries
+ ==================== */
+
+/* ==========================================================================
+ Base
+ ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+}
+
+body {
+    color: #494949;
+    font: 87.5%/1.4 'Source Sans Pro', sans-serif;
+}
+
+a {
+    color: #c10000;
+}
+
+h1 {
+    font-size: 200%;
+    line-height: 1.1;
+}
+
+p { 
+    margin: 0 0 1.4em;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ==========================================================================
+ Layouts
+ ========================================================================== */
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 2%;
+    width: 90%;
+}
+
+.container:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* header */
+
+#header {
+    background: #292929;
+    box-shadow: 0 .5em 1em #aaa;
+    -webkit-box-shadow: 0 .5em 1em #aaa;
+    -moz-box-shadow: 0 .5em 1em #aaa;
+    padding: .5em 0;
+    margin-bottom: 2em;
+}
+
+#header .logo {
+    color: #c10000;
+    font-size: 200%;
+    padding: .4em 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+nav a {
+    background: #000;
+    color: #eaeaea;
+    display: block;
+    font-weight: bold;
+    margin-bottom: .6em;
+    padding: .5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #c10000;
+}
+
+/* main */
+
+#main aside {
+    background: #ECECEC;
+    box-shadow: 0 0 1em #aaa;
+    -webkit-box-shadow: 0 0 1em #aaa;
+    -moz-box-shadow: 0 0 1em #aaa;
+    padding: 1em 4% 2em;
+}
+
+/* footer */
+
+#footer {
+    margin: 2em 0;
+    padding: .5em 0;
+}
+
+/* ==========================================================================
+ Media queries
+ ========================================================================== */
+
+/* Breakpoint: 480px */
+
+@media only screen and (min-width: 30em) {
+
+    #header .logo {
+        float: left;
+    }
+   
+    nav ul {
+        float: right;
+    }
+
+    nav ul li {
+        float: left;
+    }
+
+    nav a {
+        background: none;
+        padding: 1.5em .5em .5em 2em;
+        margin-bottom: 0;
+    }
+
+    nav a:hover {
+        background: none;
+        color: #c10000;;
+    }
+
+    nav a:last-child {
+        padding-right: .5em;
+    }
+
+}
+
+/* Breakpoint: 768px */
+
+@media only screen and (min-width: 48em) {
+
+    nav a {
+        padding-left: 3.5em;
+    }
+
+    #main section {
+        float: left;
+        width: 60%;
+    }
+
+    #main aside {
+        float: right;
+        width: 32%;
+    }
+
+}

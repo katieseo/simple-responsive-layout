@@ -1,0 +1,173 @@
+/* ====================
+    * CSS Structure
+    - Base
+    - Layouts
+    - Media queries
+ ==================== */
+
+/* ==========================================================================
+ Base
+ ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+}
+
+body {
+    color: #494949;
+    font: 87.5%/1.4 'Source Sans Pro', sans-serif;
+}
+
+a {
+    color: #c10000;
+}
+
+h1 {
+    font-size: 200%;
+    line-height: 1.1;
+}
+
+p { 
+    margin: 0 0 1.4em;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ==========================================================================
+ Layouts
+ ========================================================================== */
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 2%;
+    width: 90%;
+}
+
+.container:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* header */
+
+#header {
+    background: #292929;
+    box-shadow: 0 .5em 1em #aaa;
+    -webkit-box-shadow: 0 .5em 1em #aaa;
+    -moz-box-shadow: 0 .5em 1em #aaa;
+    padding: .5em 0;
+    margin-bottom: 2em;
+}
+
+#header .logo {
+    color: #c10000;
+    float: left;
+    font-size: 200%;
+    padding: .4em 0;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav a {
+    color: #eaeaea;
+    display: block;
+    font-weight: bold;
+    padding: 1.5em .5em .5em 3.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c10000;;
+}
+
+/* main */
+
+#main section {
+    float: left;
+    width: 60%;
+}
+
+#main aside {
+    background: #ECECEC;
+    box-shadow: 0 0 1em #aaa;
+    float: right;
+    -webkit-box-shadow: 0 0 1em #aaa;
+    -moz-box-shadow: 0 0 1em #aaa;
+    padding: 1em 4% 2em;
+    width: 32%;
+}
+
+/* footer */
+
+#footer {
+    margin: 2em 0;
+    padding: .5em 0;
+}
+
+/* ==========================================================================
+ Media queries
+ ========================================================================== */
+
+/* Breakpoint: 768px */
+
+@media only screen and (max-width: 48em) {
+
+    nav a {
+        padding-left: 2em;
+    }
+
+    #main section,
+    #main aside {
+        float: none;
+        width: auto;
+    }
+
+}
+
+/* Breakpoint: 480px */
+
+@media only screen and (max-width: 30em) {
+
+    #header .logo {
+        float: none;
+    }
+
+    nav ul {
+        float: none;
+    }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav a {
+        background: #000;
+        margin-bottom: .6em;
+        padding: .5em;
+    }
+
+    nav a:hover {
+        background: #c10000;
+        color: #eaeaea;
+    }
+
+}
